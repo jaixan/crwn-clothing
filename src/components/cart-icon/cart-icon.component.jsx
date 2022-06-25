@@ -5,7 +5,7 @@ import {ReactComponent as ShoppingIcon} from '../../assets/shopping-bag.svg';
 
 const CartIcon = () => {
     
-    const { cartVisible, setCartVisible } = useContext(CartContext);
+    const { cartVisible, setCartVisible, cartCount } = useContext(CartContext);
 
     const CartIconClickedHandler = () => {
         setCartVisible(!cartVisible);
@@ -15,7 +15,7 @@ const CartIcon = () => {
     return (
         <div className="cart-icon-container" onClick={CartIconClickedHandler}>
             <ShoppingIcon className="shopping-icon" />
-            <span className="item-count">0</span>
+            <span className="item-count">{cartCount}</span>
         </div>
     );
 }
