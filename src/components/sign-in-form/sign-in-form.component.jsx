@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './sign-in-form.styles.scss';
+import {SignInContainer} from './sign-in-form.styles';
 import FormInput from "../form-input/form-input.component";
 import Button from "../button/button.component";
 
@@ -54,7 +54,7 @@ const SignInForm = () => {
       };
 
     return (
-      <div className="sign-in-container">
+      <SignInContainer>
         <h2>Sign In</h2>
         <span>Sign In with your Email and Password</span>
         <form onSubmit={handleSubmit}>
@@ -85,7 +85,7 @@ const SignInForm = () => {
             </Button>
           </div>
         </form>
-      </div>
+      </SignInContainer>
     );
     }
 
