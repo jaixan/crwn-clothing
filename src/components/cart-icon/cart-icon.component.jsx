@@ -5,11 +5,10 @@ import { CartIconContainer, ItemCount, ShoppingIcon } from "./cart-icon.styles";
 
 const CartIcon = () => {
     
-    const { cartVisible, setCartVisible, cartCount } = useContext(CartContext);
+    const { ToggleIsCartVisible, cartCount } = useContext(CartContext);
 
     const CartIconClickedHandler = () => {
-        setCartVisible(!cartVisible);
-        console.log(cartVisible);
+        ToggleIsCartVisible();
     }
 
     return (

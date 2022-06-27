@@ -14,12 +14,12 @@ import { CartContext } from "../../contexts/cart.context";
 
 const CheckoutItem = ({ cartItem }) => {
   const { name, imageUrl, quantity, price } = cartItem;
-  const { removeItemFromCart, increaseItemQuantity, decreaseItemQuantity } =
+  const { removeItemFromCart, addItemToCart, clearItemFromCart } =
     useContext(CartContext);
 
-  const removeCartItem = () => removeItemFromCart(cartItem);
-  const decreaseCartItemQuantity = () => decreaseItemQuantity(cartItem);
-  const increaseCartItemQuantity = () => increaseItemQuantity(cartItem);
+  const removeCartItem = () => clearItemFromCart(cartItem);
+  const decreaseCartItemQuantity = () => removeItemFromCart(cartItem);
+  const increaseCartItemQuantity = () => addItemToCart(cartItem);
 
   return (
     <CheckOutItemContainer>
